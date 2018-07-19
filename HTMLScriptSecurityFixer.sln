@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HTMLScriptSecurityFixer", "HTMLScriptSecurityFixer\HTMLScriptSecurityFixer.csproj", "{23786D7D-3728-4CC1-B240-951F3DFA9100}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23786D7D-3728-4CC1-B240-951F3DFA9100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23786D7D-3728-4CC1-B240-951F3DFA9100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23786D7D-3728-4CC1-B240-951F3DFA9100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23786D7D-3728-4CC1-B240-951F3DFA9100}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96F75071-4F02-406F-98E4-66C2C3F30458}
+	EndGlobalSection
+EndGlobal

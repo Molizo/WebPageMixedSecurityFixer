@@ -23,12 +23,51 @@ namespace HTMLScriptSecurityFixer.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3000")]
-        public int connectionTimeout {
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastUsername {
             get {
-                return ((int)(this["connectionTimeout"]));
+                return ((string)(this["lastUsername"]));
+            }
+            set {
+                this["lastUsername"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastIP {
+            get {
+                return ((string)(this["lastIP"]));
+            }
+            set {
+                this["lastIP"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastPort {
+            get {
+                return ((string)(this["lastPort"]));
+            }
+            set {
+                this["lastPort"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string lastRootPath {
+            get {
+                return ((string)(this["lastRootPath"]));
+            }
+            set {
+                this["lastRootPath"] = value;
             }
         }
     }

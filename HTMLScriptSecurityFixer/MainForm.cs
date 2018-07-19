@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using FluentFTP;
 using System.Net.Sockets;
+using System.Media;
 
 namespace HTMLScriptSecurityFixer
 {
@@ -57,32 +58,18 @@ namespace HTMLScriptSecurityFixer
             openFileDialog.ShowDialog();
         }
 
-        private bool IsMachineOnline(string host, int port)
+        private void buttonConnect_Click(object sender, EventArgs e)
         {
+            int port = Convert.ToInt32(textBoxPort.Text.ToString());
             try
             {
-                using (var client = new TcpClient())
-                {
-                    var result = client.BeginConnect(host, port, null, null);
-                    var success = result.AsyncWaitHandle.WaitOne(Properties.Settings.Default.connectionTimeout);
-                    if (!success)
-                    {
-                        return false;
-                    }
-
-                    client.EndConnect(result);
-                }
+                FtpClient ftpClient = new FtpClient(textBoxIP.Text, port, textBoxUsername.Text, textBoxPassword.Text);
+                ftpClient.Connect();
             }
             catch
             {
-                return false;
+                MessageBox.Show("Error connecting to server\nPlease check the connection details", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return true;
-        }
-
-        private void buttonConnect_Click(object sender, EventArgs e)
-        {
-            FtpClient ftpClient = new FtpClient()
         }
     }
 }

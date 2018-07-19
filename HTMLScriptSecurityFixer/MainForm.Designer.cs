@@ -30,22 +30,22 @@
         {
             this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.textBoxRootPath = new System.Windows.Forms.TextBox();
+            this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUsername = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxUsername = new System.Windows.Forms.TextBox();
-            this.textBoxPassword = new System.Windows.Forms.TextBox();
-            this.textBoxRootPath = new System.Windows.Forms.TextBox();
             this.buttonConnect = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonOpenFile = new System.Windows.Forms.Button();
             this.buttonOpenFolder = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.buttonOpenFile = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxPort = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxIP = new System.Windows.Forms.TextBox();
-            this.textBoxPort = new System.Windows.Forms.TextBox();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -83,16 +83,33 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(305, 151);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // label2
+            // textBoxRootPath
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(4, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Username:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.textBoxRootPath.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxRootPath.Location = new System.Drawing.Point(71, 96);
+            this.textBoxRootPath.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxRootPath.Name = "textBoxRootPath";
+            this.textBoxRootPath.Size = new System.Drawing.Size(228, 20);
+            this.textBoxRootPath.TabIndex = 5;
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxPassword.Location = new System.Drawing.Point(71, 66);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(228, 20);
+            this.textBoxPassword.TabIndex = 4;
+            // 
+            // textBoxUsername
+            // 
+            this.textBoxUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.textBoxUsername.Location = new System.Drawing.Point(71, 36);
+            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxUsername.Name = "textBoxUsername";
+            this.textBoxUsername.Size = new System.Drawing.Size(228, 20);
+            this.textBoxUsername.TabIndex = 3;
             // 
             // label3
             // 
@@ -106,6 +123,17 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Hostname:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(4, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Username:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -128,34 +156,6 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Root Path:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // textBoxUsername
-            // 
-            this.textBoxUsername.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxUsername.Location = new System.Drawing.Point(71, 36);
-            this.textBoxUsername.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxUsername.Name = "textBoxUsername";
-            this.textBoxUsername.Size = new System.Drawing.Size(228, 20);
-            this.textBoxUsername.TabIndex = 3;
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxPassword.Location = new System.Drawing.Point(71, 66);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(228, 20);
-            this.textBoxPassword.TabIndex = 4;
-            // 
-            // textBoxRootPath
-            // 
-            this.textBoxRootPath.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBoxRootPath.Location = new System.Drawing.Point(71, 96);
-            this.textBoxRootPath.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxRootPath.Name = "textBoxRootPath";
-            this.textBoxRootPath.Size = new System.Drawing.Size(228, 20);
-            this.textBoxRootPath.TabIndex = 5;
             // 
             // buttonConnect
             // 
@@ -184,20 +184,9 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(234, 24);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
-            // buttonOpenFile
-            // 
-            this.buttonOpenFile.Location = new System.Drawing.Point(75, 0);
-            this.buttonOpenFile.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonOpenFile.Name = "buttonOpenFile";
-            this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
-            this.buttonOpenFile.TabIndex = 0;
-            this.buttonOpenFile.Text = "Open File";
-            this.buttonOpenFile.UseVisualStyleBackColor = true;
-            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
-            // 
             // buttonOpenFolder
             // 
-            this.buttonOpenFolder.Location = new System.Drawing.Point(155, 0);
+            this.buttonOpenFolder.Location = new System.Drawing.Point(157, 0);
             this.buttonOpenFolder.Margin = new System.Windows.Forms.Padding(0);
             this.buttonOpenFolder.Name = "buttonOpenFolder";
             this.buttonOpenFolder.Size = new System.Drawing.Size(76, 23);
@@ -206,19 +195,23 @@
             this.buttonOpenFolder.UseVisualStyleBackColor = true;
             this.buttonOpenFolder.Click += new System.EventHandler(this.buttonFolderSelect_Click);
             // 
-            // openFileDialog
+            // buttonOpenFile
             // 
-            this.openFileDialog.DefaultExt = "html";
-            this.openFileDialog.Filter = "Web Page files|*.html;*.htm;*.php|HTML files|*.html;*.htm|PHP files|*.php|All fil" +
-    "es|*.*";
-            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
+            this.buttonOpenFile.Location = new System.Drawing.Point(0, 0);
+            this.buttonOpenFile.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonOpenFile.Name = "buttonOpenFile";
+            this.buttonOpenFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonOpenFile.TabIndex = 0;
+            this.buttonOpenFile.Text = "Open File";
+            this.buttonOpenFile.UseVisualStyleBackColor = true;
+            this.buttonOpenFile.Click += new System.EventHandler(this.buttonOpenFile_Click);
             // 
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel3.Controls.Add(this.textBoxPort, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.textBoxIP, 0, 0);
@@ -230,6 +223,15 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(240, 30);
             this.tableLayoutPanel3.TabIndex = 8;
+            // 
+            // textBoxPort
+            // 
+            this.textBoxPort.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxPort.Location = new System.Drawing.Point(195, 6);
+            this.textBoxPort.Margin = new System.Windows.Forms.Padding(6);
+            this.textBoxPort.Name = "textBoxPort";
+            this.textBoxPort.Size = new System.Drawing.Size(39, 20);
+            this.textBoxPort.TabIndex = 2;
             // 
             // label5
             // 
@@ -251,14 +253,12 @@
             this.textBoxIP.Size = new System.Drawing.Size(148, 20);
             this.textBoxIP.TabIndex = 1;
             // 
-            // textBoxPort
+            // openFileDialog
             // 
-            this.textBoxPort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPort.Location = new System.Drawing.Point(195, 6);
-            this.textBoxPort.Margin = new System.Windows.Forms.Padding(6);
-            this.textBoxPort.Name = "textBoxPort";
-            this.textBoxPort.Size = new System.Drawing.Size(39, 20);
-            this.textBoxPort.TabIndex = 2;
+            this.openFileDialog.DefaultExt = "html";
+            this.openFileDialog.Filter = "Web Page files|*.html;*.htm;*.php|HTML files|*.html;*.htm|PHP files|*.php|All fil" +
+    "es|*.*";
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
             // 
             // MainForm
             // 

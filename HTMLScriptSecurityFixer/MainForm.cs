@@ -90,10 +90,5 @@ namespace HTMLScriptSecurityFixer
                 MessageBox.Show("Error connecting to server\nPlease check the connection details", "Connection Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

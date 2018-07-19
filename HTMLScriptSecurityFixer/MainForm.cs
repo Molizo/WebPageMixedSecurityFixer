@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using FluentFTP;
+using System.Net.Sockets;
 
 namespace HTMLScriptSecurityFixer
 {
@@ -54,6 +55,29 @@ namespace HTMLScriptSecurityFixer
         private void buttonOpenFile_Click(object sender, EventArgs e)
         {
             openFileDialog.ShowDialog();
+        }
+
+        private bool IsMachineOnline(string host, int port)
+        {
+            try
+            {
+                using (var client = new TcpClient())
+                {
+                    var result = client.BeginConnect(host, port, null, null);
+                    var success = result.AsyncWaitHandle.WaitOne(Properties.Settings.Default.connectionTimeout);
+                    if (!success)
+                    {
+                        return false;
+                    }
+
+                    client.EndConnect(result);
+                }
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
         }
 
         private void buttonConnect_Click(object sender, EventArgs e)

@@ -19,6 +19,10 @@ namespace HTMLScriptSecurityFixer
         public MainForm()
         {
             InitializeComponent();
+            textBoxUsername.Text = Properties.Settings.Default.lastUsername;
+            textBoxIP.Text = Properties.Settings.Default.lastIP;
+            textBoxPort.Text = Properties.Settings.Default.lastPort;
+            textBoxRootPath.Text = Properties.Settings.Default.lastRootPath;
         }
 
         private void buttonFolderSelect_Click(object sender, EventArgs e)
@@ -65,6 +69,21 @@ namespace HTMLScriptSecurityFixer
             {
                 FtpClient ftpClient = new FtpClient(textBoxIP.Text, port, textBoxUsername.Text, textBoxPassword.Text);
                 ftpClient.Connect();
+                ftpClient.SetWorkingDirectory(textBoxRootPath.Text);
+                foreach (FtpListItem item in ftpClient.GetListing(textBoxRootPath.Text))
+                {
+                    if (item.Type == FtpFileSystemObjectType.File)
+                    {
+                        if (item.FullName.Contains(".htm") || item.FullName.Contains(".php"))
+                        {
+                            ftpClient.DownloadFile("./file.ext", item.FullName);
+                            fixFile("./file.ext");
+                            ftpClient.UploadFile("./file.ext", item.FullName);
+                            System.Threading.Thread.Sleep(100);
+                            File.Delete("./file.ext");
+                        }
+                    }
+                }
             }
             catch
             {

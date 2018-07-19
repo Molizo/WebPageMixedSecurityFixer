@@ -92,6 +92,7 @@
             this.label2.Size = new System.Drawing.Size(58, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Username:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label3
             // 
@@ -99,11 +100,12 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.label3.Location = new System.Drawing.Point(4, 8);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Margin = new System.Windows.Forms.Padding(0, 0, 3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(58, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "IP Address:";
+            this.label3.Text = "Hostname:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -114,6 +116,7 @@
             this.label4.Size = new System.Drawing.Size(56, 13);
             this.label4.TabIndex = 1;
             this.label4.Text = "Password:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
@@ -124,6 +127,7 @@
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Root Path:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // textBoxUsername
             // 
@@ -160,7 +164,7 @@
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(62, 23);
             this.buttonConnect.TabIndex = 6;
-            this.buttonConnect.Text = "Connect";
+            this.buttonConnect.Text = "Fix";
             this.buttonConnect.UseVisualStyleBackColor = true;
             this.buttonConnect.Click += new System.EventHandler(this.buttonConnect_Click);
             // 
@@ -170,8 +174,8 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 77F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel2.Controls.Add(this.buttonOpenFile, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.buttonOpenFolder, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.buttonOpenFile, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(68, 123);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -212,9 +216,9 @@
             // tableLayoutPanel3
             // 
             this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 151F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 160F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 29F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel3.Controls.Add(this.textBoxPort, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.textBoxIP, 0, 0);
@@ -231,7 +235,8 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(154, 8);
+            this.label5.Location = new System.Drawing.Point(160, 8);
+            this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 0;
@@ -243,16 +248,16 @@
             this.textBoxIP.Location = new System.Drawing.Point(6, 6);
             this.textBoxIP.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxIP.Name = "textBoxIP";
-            this.textBoxIP.Size = new System.Drawing.Size(139, 20);
+            this.textBoxIP.Size = new System.Drawing.Size(148, 20);
             this.textBoxIP.TabIndex = 1;
             // 
             // textBoxPort
             // 
             this.textBoxPort.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPort.Location = new System.Drawing.Point(192, 6);
+            this.textBoxPort.Location = new System.Drawing.Point(195, 6);
             this.textBoxPort.Margin = new System.Windows.Forms.Padding(6);
             this.textBoxPort.Name = "textBoxPort";
-            this.textBoxPort.Size = new System.Drawing.Size(42, 20);
+            this.textBoxPort.Size = new System.Drawing.Size(39, 20);
             this.textBoxPort.TabIndex = 2;
             // 
             // MainForm
@@ -263,10 +268,11 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Web Pages Script Security Error Fixer";
+            this.Text = "Web Page Mixed Security Error Fixer";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);

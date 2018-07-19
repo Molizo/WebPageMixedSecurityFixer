@@ -84,6 +84,10 @@ namespace HTMLScriptSecurityFixer
                         }
                     }
                 }
+                Properties.Settings.Default.lastUsername = textBoxUsername.Text;
+                Properties.Settings.Default.lastIP = textBoxIP.Text;
+                Properties.Settings.Default.lastPort = textBoxPort.Text;
+                Properties.Settings.Default.lastRootPath = textBoxRootPath.Text;
             }
             catch
             {
